@@ -118,6 +118,9 @@ func generateWebSocketNonce(key string) string {
 	return base64.StdEncoding.EncodeToString(sha)
 }
 
+// Note to self: HTTP headers end with double \r\n before content body...
+// JavaScript websocket client doesn't care about letting the client
+// know that there's an issue with HTTP request formatting.
 func acceptConnection(client net.Conn, nonce string) (int, error) {
 	acceptHeaders := []string{
 		"HTTP/1.1 101 Switching Protocols",
