@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>ws test (tcp)</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                color: #ddd2d2;
+                background-color: #443b3b;
+                font-family: "SF Pro", Arial, sans-serif;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+            }
+
+            p {
+                font-size: 32px;
+            }
+
+            ul {
+                list-style: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="app" style="margin-bottom: 2em;">
+            <ul id="messages"></ul>
+
+            <input type="text" id="s-ws-key-input" />
+            <button type="button" id="s-ws-key-submit">submit</button>
+        </div>
+
+        <script src="websocket-client.js"></script>
+    </body>
+</html>
